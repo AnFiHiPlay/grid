@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+p {
+    color: #888;
+    font-size: 1em;
+    margin-top: -10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+}
+
+.product-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+}
+
+.price {
+    font-size: 1em;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.discount-price {
+    font-size: 1.2em;
+    color: red;
+    margin-left: 10px;
+}
+
+  /* Планшетная версия */
+  @media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки на планшете */
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильных */
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 колонка на маленьких устройствах */
+    }
+}
